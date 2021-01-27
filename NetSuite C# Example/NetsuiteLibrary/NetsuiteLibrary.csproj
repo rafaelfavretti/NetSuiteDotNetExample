@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{023E6D2D-9DE4-4151-9543-A58E89280D24}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetsuiteLibrary</RootNamespace>
+    <AssemblyName>NetsuiteLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=75b3c62967edc2a2, processorArchitecture=MSIL">
+      <HintPath>..\packages\OAuth.1.0.3\lib\net40\OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="ctor.cs" />
+    <Compile Include="CustomerExample.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://tstdrv2066000.suitetalk.api.netsuite.com/wsdl/v2020_2_0/netsuite.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.netsuite.api.suitetalk.tstdrv2066000\</RelPath>
+      <UpdateFromURL>https://tstdrv2066000.suitetalk.api.netsuite.com/wsdl/v2020_2_0/netsuite.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>NetsuiteLibrary_com_netsuite_api_suitetalk_tstdrv2066000_NetSuiteService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\accounting.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\accountingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\AsyncResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\AsyncStatusResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\bank.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\bankTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\commonTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\communication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\communicationTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\core.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\coreTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\customers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\customerTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\customization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\customizationTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\demandPlanning.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\demandPlanningTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\employees.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\employees0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\employeeTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\employeeTypes0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\faults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\faultTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\fileCabinet.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\fileCabinetTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\financial.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\financialTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\general.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetAccountGovernanceInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetAllResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetBudgetExchangeRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetCurrencyRateResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetCustomizationIdResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetDataCenterUrlsResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetDeletedResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetIntegrationGovernanceInfoResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetItemAvailabilityResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetPostingTransactionSummaryResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetSavedSearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetSelectValueResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\GetServerTimeResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\inventory.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\inventoryTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\marketing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\marketingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\messages.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\netsuite.wsdl" />
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\purchases.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\purchaseTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\ReadResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\ReadResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\relationships.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\relationshipTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\sales.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\saleTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\scheduling.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\schedulingTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\SearchResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\SessionResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\supplyChain.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\supplyChainTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\support.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\supportTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\website.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\websiteTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\WriteResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\com.netsuite.api.suitetalk.tstdrv2066000\WriteResponseList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

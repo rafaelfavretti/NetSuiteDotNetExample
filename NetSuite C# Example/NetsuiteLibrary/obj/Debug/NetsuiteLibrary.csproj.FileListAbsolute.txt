@@ -1,0 +1,11 @@
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\NetsuiteLibrary.dll.config
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\NetsuiteLibrary.dll
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\NetsuiteLibrary.pdb
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\obj\Debug\NetsuiteLibrary.csprojAssemblyReference.cache
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\obj\Debug\NetsuiteLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\obj\Debug\NetsuiteLibrary.dll
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\obj\Debug\NetsuiteLibrary.pdb
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\OAuth.dll
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\OAuth.pdb
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\bin\Debug\OAuth.xml
+C:\Users\Rafael\source\repos\NetSuite\NetsuiteLibrary\obj\Debug\NetsuiteLibrary.csproj.CopyComplete
